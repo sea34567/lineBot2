@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     a=os.environ['Authorization']
-    return "นายวชิรพันธุ์ หนองแพ เลขที่ภ ม.4/6"
+    return "นายวชิรพันธุ์ หนองแพ เลขที่4ม.4/6"
 
 @app.route("/webhook", methods=['POST'])
 def webhook():
