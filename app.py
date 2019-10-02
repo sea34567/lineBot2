@@ -19,9 +19,9 @@ def webhook():
 def callback():
     json_line = request.get_json()
     json_line = json.dumps(json_line)
-    decoded = json.loads(json_line)
-    user = decoded['originalDetectlntentRequest']['payload']['data']['replyToken']
-    userText = decoded['queryResult']['intent]['displayName']
+    decoded = json.loads(json_line)  
+    user = decoded['originalDetectIntentRequest']['payload']['data']['replyToken']
+    userText = decoded['queryResult']['intent']['displayName']
     if (userText == 'สวัสดี') :
         sendText(user,'สวัสดีจ้า')
     elif (userText == 'สบายดีไหม') :
